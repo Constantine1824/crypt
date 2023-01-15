@@ -1,0 +1,106 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'login.css' %}">
+    <link rel="stylesheet" href="{%static 'bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'signup.css'%}">
+    <link rel="stylesheet" href="{%static 'font-awesome/css/font-awesome.min.css'%}">
+    <title>Crypt!</title>
+</head>
+<body>
+       <!--Navbar-->
+  <nav class="nav">
+        <div class="links">
+            <p class="logo active">Crypt!</p>
+        </div>
+  </nav>
+
+    <div class="container container-Height">
+        <div class="main container-fluid">
+            <h1 id="small-header">Saved Passwords</h1>
+            <button type="button" id="btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add</button>
+        </div>
+        
+       {%if passw is not None%}
+        <div class="table-responsive-xxl container-height">
+          <table class="table table-info">
+            <thead>
+              <tr>
+                <!-- <th scope="col"></th> -->
+                <th scope="col">Site</th>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+              </tr>
+            </thead>   
+            <tbody>
+              <tr>
+             
+          {%for pw in passw%}
+                <td>{{pw.website}}</td>
+                <td>{{pw.username}}</td>
+                <td>
+                  <input id="{{pw.id}}" type="password" class="hidden" value="{{pw.hashedPw}}" readonly style="border: none;">
+                  <script>let Uid={{pw.id}}</script>
+                 <input type="checkbox" onclick="view({{pw.id}})">
+                </td> 
+              </tr>
+            </tbody>
+            {%endfor%}
+          </table>
+          </div>
+          
+
+        {%else%}
+        <div class="no-password">
+          <h5>No passwords yet! Click <a href="#">here</a> to add</h5>
+        </div>
+
+        
+      {%endif%}
+    </div>
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add</h5>
+            <button type="button" id="close" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST">{%csrf_token%}
+              <div class="form-group">
+                <label class="col-form-label">Website</label>
+                <input type="text" class="form-control" name="website">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Username</label>
+                <input type="text" class="form-control" name="Username">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Password</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+              <div class="modal-footer">
+            <button class="btn btn-secondary" id="close2" type="button" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <footer>
+        <p class="footer">&copy;2022 Crypt</p>
+    </footer>
+    <script src="{% static 'index.js' %}"></script>
+    <script src="{%static 'bootstrap.min.js'%}"></script>
+    <!-- <script src="{% static 'new.js' %}"></script> -->
+    
+        <!--End of footer-->

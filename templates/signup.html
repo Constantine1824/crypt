@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'login.css' %}">
+    <link rel="stylesheet" href="{%static 'bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'signup.css'%}">
+    <title>Crypt!-Sign-Up</title>
+</head>
+<body>
+       <!--Navbar-->
+    <nav class="nav">
+        <div class="links">
+            <p class="logo active">Crypt!</p>
+        </div>
+    </nav>
+    <!--End of navbar-->
+    <!--Start of content-->
+    <div class="logins-container">
+        <div class="signup">
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor %}
+            <form class="signup-form" method="POST"> {%csrf_token%}
+                <h1>Sign Up</h1>
+                <input type="email" class="input" name="email" placeholder="Email" required><br>
+                <input type="text" class="input" name="username" placeholder="Username" required><br>
+                <input type="password" required placeholder="Password" name="password" class="input"><br>
+                <input type="password" required placeholder="Retype Password" name="password2" class="input"><br>
+                <button type="submit" class="login-btn">Sign Up!</button>
+            <p>Already have an account?<a id="sign" href="#">Login</a></p>
+        </form>
+            
+        </div>
+    </div>
+    <!--End of content-->
+
+    <!--footer-->
+    <footer>
+        <p class="footer">&copy;2022 Crypt</p>
+    </footer>
+    <script src="bootstrap.min.js"></script>
+    <!--End of footer-->
+    </body>

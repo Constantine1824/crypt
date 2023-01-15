@@ -1,0 +1,167 @@
+.signup {
+   display: flex;
+   justify-content: center;
+}
+
+/* h1 {
+   font-weight: bolder;
+   font-size: xx-large;
+   font-style: normal;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding-bottom: 8px;
+} */
+
+.signup-input {
+   width: 28rem;
+   height: 2rem;
+   margin-bottom: 12px;
+   padding-bottom: 18px;
+}
+
+.signup-btn {
+   margin-left: 12rem;
+   color: darkkhaki;
+   background-color: chocolate;
+   width: 6rem;
+   height: 4rem;
+   /* border:2rem solid red; */
+   border-style: groove;
+   border-radius: 2px;
+}
+
+.container-Height {
+   min-height: 30rem;
+} 
+
+.table {
+   margin-top: 21px;
+}
+
+.new-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 3px solid;
+}
+
+footer {
+   height: 6rem;
+   display: flex;
+   justify-content: center;
+   background-color: black;
+   color: antiquewhite;
+   margin-top: 4rem;
+   padding-top: 2rem;
+   margin-bottom: 0px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.password-field {
+   background-color: transparent;
+   border: none;
+   flex: 1;
+   height: 20px;
+   width: fit-content;
+}
+
+.main {
+   display: flex;
+   font-size: medium;
+}
+
+#small-header {
+   padding-left: 27px;
+   letter-spacing: 1px;
+   padding-top: 8px;
+   margin-top: 8px;
+   font-size: medium;
+   padding-bottom: 4px;
+}
+
+#add-btn {
+   margin-left: 21rem;
+   margin-right: 12px;
+   width: 87px;
+   height: 2rem;
+   margin-top: 12px;
+   background-color: transparent;
+   color: blue;
+}
+
+#search {
+   width: 12rem;
+   height: 2rem;
+   margin-top: 12px;
+}
+
+
+.bos-size {
+   padding-top: 18px;
+   display: flex;
+}
+
+.bos-size p {
+   font-size: larger;
+   font-weight: 600;
+}
+.bos-size input {
+   border: none;
+   padding-bottom: 17px;
+   margin-left: 8px;
+   width: fit-content;
+}
+
+.bos-size button{
+   width: 5rem;
+   height: 2rem;
+   background-color: blue;
+   margin-left: 4px;
+}
+
+
+.remove-btn{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 12px;
+}
+
+
+
+.openBtn {
+   display: flex;
+   justify-content: left;
+}
+
+
+.openButton {
+   display: flex;
+   padding-left: 21rem;
+}
+
+.openButton button {
+   width: 4rem;
+   background-color: lavenderblush;
+   margin-top: 3px;
+}
+
+
+.no-password {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 7rem;
+}
+
+.hidden {
+   background-color: transparent;
+   width: 8rem;
+}
+
+.view {
+   border: none;
+   background-color: transparent;
+}

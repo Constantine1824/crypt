@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'login.css' %}">
+    <link rel="stylesheet" href="{%static 'bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'signup.css'%}">
+    <title>Crypt!</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="links">
+            <p class="logo active">Crypt!</p>
+        </div>
+</nav>
+
+    <div class="container-sm container-height logins-container">
+        <div class="form">
+            <form class="z-form" method="POST"> {%csrf_token%}
+                <p class="form-content"> Username</p>
+                <input type="text" class="input" name="username" required>
+                <p class="form-content">Website:</p>
+                <input type="text" class="input" name="website" required>
+                <p class="form-content">Password</p>
+                <input type="password" class="input" name="password" required>
+                <button type="submit" class="login-btn">Add</button>
+            </form>
+        </div>
+    </div>
+
+
+
+ <!--footer-->
+ <footer>
+    <p class="footer">&copy;2022 Crypt</p>
+</footer>
+    <script src="bootstrap.min.js"></script>
+    <!--End of footer-->
