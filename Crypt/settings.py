@@ -76,7 +76,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 WSGI_APPLICATION = 'Crypt.wsgi.application'
 
@@ -91,7 +91,7 @@ DATABASES = {
         'USER':'xsivqxqj',
         'PASSWORD':os.environ.get('PASSWORD'),
         'HOST':'dumbo.db.elephantsql.com',
-        'PORT':'5433',
+        'PORT':'5432',
     }
 }
 # DATABASES = {
