@@ -89,9 +89,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'xsivqxqj',
         'USER':'xsivqxqj',
-        'PASSWORD':os.environ.get('SECRET_KEY'),
+        'PASSWORD':os.environ.get('PASSWORD'),
         'HOST':'dumbo.db.elephantsql.com',
-        'PORT':'5433',
+        'PORT':'5432',
     }
 }
 # DATABASES = {
